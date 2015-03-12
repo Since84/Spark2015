@@ -17,24 +17,40 @@ define('WP_CACHE', true); // Added by W3 Total Cache
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
+
+$host = $_SERVER['HTTP_HOST'];
+	
+
 /** The name of the database for WordPress */
-define('DB_NAME', 'spark');
+define('DB_NAME', 'elefin5_infograph');
 
-/** MySQL database username */
-define('DB_USER', 'root');
+	// ** MySQL settings - You can get this info from your web host ** //
+	if ( strpos( $host, 'ev.info' ) ){
 
-/** MySQL database password */
-define('DB_PASSWORD', 'galaxy1');
+		/** MySQL database username */
+		define('DB_USER', 'elefin5_damon');
 
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+		/** MySQL database password */
+		define('DB_PASSWORD', 'BOOM20!5');
 
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
+	} else {
+		/** MySQL database username */
+		define('DB_USER', 'root');
 
-/** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+		/** MySQL database password */
+		define('DB_PASSWORD', 'galaxy1');	
+	}
+
+			/** MySQL hostname */
+		define('DB_HOST', 'localhost');
+
+		/** Database Charset to use in creating database tables. */
+		define('DB_CHARSET', 'utf8');
+
+		/** The Database Collate type. Don't change this if in doubt. */
+		define('DB_COLLATE', '');	
+
+
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -78,7 +94,7 @@ $table_prefix  = 'wp_';
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* That's all, stop editing! Happy blogging. */
 
