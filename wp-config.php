@@ -22,24 +22,14 @@ $host = $_SERVER['HTTP_HOST'];
 	
 
 /** The name of the database for WordPress */
-define('DB_NAME', 'elefin5_infograph');
+define('DB_NAME', 'info');
 
 	// ** MySQL settings - You can get this info from your web host ** //
-	if ( strpos( $host, 'ev.info' ) ){
-
-		/** MySQL database username */
-		define('DB_USER', 'elefin5_damon');
-
-		/** MySQL database password */
-		define('DB_PASSWORD', 'BOOM20!5');
-
-	} else {
 		/** MySQL database username */
 		define('DB_USER', 'root');
 
 		/** MySQL database password */
 		define('DB_PASSWORD', 'galaxy1');	
-	}
 
 			/** MySQL hostname */
 		define('DB_HOST', 'localhost');
